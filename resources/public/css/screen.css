@@ -1,0 +1,248 @@
+html,
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    height: 100%;
+}
+
+.navbar {
+  margin-bottom: 10px;
+  border-radius: 0px;
+}
+.navbar-brand {
+  float: none;
+}
+.navbar-nav .nav-item {
+  float: none;
+}
+.navbar-divider,
+.navbar-nav .nav-item+.nav-item,
+.navbar-nav .nav-link + .nav-link {
+  margin-left: 0;
+}
+@media (min-width: 34em) {
+  .navbar-brand {
+    float: left;
+  }
+  .navbar-nav .nav-item {
+    float: left;
+  }
+  .navbar-divider,
+  .navbar-nav .nav-item+.nav-item,
+  .navbar-nav .nav-link + .nav-link {
+    margin-left: 1rem;
+  }
+}
+
+@-moz-keyframes three-quarters-loader {
+    0% {
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes three-quarters-loader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes three-quarters-loader {
+    0% {
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+.left-side-container {
+    position:fixed;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    height: 100%;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    min-width: 340px;
+    background-color: rgb(0, 1, 29);
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.login-field-container{
+    position: absolute;
+    right:5%;
+    top: 50%;
+    min-width: 300px;
+    margin-top: -50px;
+}
+.login-title{
+    position: absolute;
+    color:black;
+    font-size: 600%;
+    font-style: normal;
+    top: 35%;
+    right: 40%;
+}
+.top-right-user-name{
+    top:1%;
+    right:5%;
+    position: fixed;
+    color: rgb(0, 1, 29);
+}
+.top-right-side-button{
+    color:white;
+    border-radius:3px;
+    position:fixed;
+    right:5%;
+    text-decoration: none;
+    opacity: 0.8;
+    border:0;
+    font-size:18px;
+    padding:4px;
+    cursor: pointer;
+}
+
+.logout-button{
+    top:4.5%;
+    background: rgb(0, 1, 29);
+}
+.logout-button:hover{
+    background: rgb(220, 104, 90);
+    opacity: 1;
+}
+.invite-button{
+    padding:6px;
+    top:12%;
+    background: #2e72ed;
+}
+.invite-button:hover{
+    background: rgb(0, 169, 65);
+}
+
+.player-list-container{
+    margin:30px;
+    width: 100%;
+    color:white;
+}
+.player-list{
+    list-style-type:none;
+    -webkit-padding-start: 5px;
+}
+.player-list-button{
+    text-decoration: none;
+    opacity: 0.7;
+    background: rgba(148,220,213,0);
+    border:0;
+    cursor: pointer;
+}
+.player-list-icon{
+    width: 40px;
+    text-decoration: none;
+    background: rgba(148,220,213,0);
+    border:0;
+}
+.player-list-button:hover {
+    opacity: 1;
+}
+.player-name{
+    margin: 5px;
+    font-size: 20px;
+    color:white;
+}
+
+.game-status-container{
+    margin:40px;
+    width: 100%;
+    color:white;
+}
+.left-side-button{
+    color:white;
+    border-radius:3px;
+    cursor: pointer;
+    color:white;
+    padding:6px;
+    margin:1px;
+    top:12%;
+    background: rgb(0, 1, 29);
+}
+ .left-side-button:hover{
+     background: white;
+     color: rgb(0, 1, 29);
+     border-color: rgb(0, 1, 29);
+ }
+
+.game-container{
+    top:10%;
+    position:fixed;
+    margin:10px;
+    left:30%;
+}
+
+.game {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-gap: .5em;
+    max-width: 100%;
+    height: 100%;
+    background: white;
+    padding: .5em;
+    /*box-shadow: 0 3px 6px rgba(54,79,199,0.05), 0 7px 14px rgba(54,79,199,0.1);*/
+    box-sizing: border-box;
+}
+
+.game-field {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    width: 200px;
+    height: 200px;
+    border: 3px solid #fff;
+    border-radius: 1.5em;
+    box-sizing: border-box;
+    background-color: cornflowerblue;
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size: 60%;
+}
+.game-field-clicked-o{
+    background-color: #ecaf4f;
+    background-image: url("../img/circle.png");
+}
+.game-field-hover-o:hover{
+    background-color: rgba(236, 175, 79, 0.8);
+    background-image: url("../img/circle.png");
+}
+.game-field-clicked-x{
+    background-color: #dc685a;
+    background-image: url("../img/cross.png");
+
+}
+.game-field-hover-x:hover{
+    background-color: rgba(220, 104, 90, 0.8);
+    background-image: url("../img/cross.png");
+}
+
+
+
+
+
+
